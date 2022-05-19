@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains timezone_handler.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function timezone_handler_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the timezone_handler module.
+    case 'help.page.timezone_handler':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('code related for timezone') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function timezone_handler_theme() {
+  
+  $content = array();
+  return [
+    'time_zone_block' => [
+      'variables' => [
+        'content' => $content,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

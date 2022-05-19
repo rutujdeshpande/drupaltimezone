@@ -1,0 +1,5 @@
+timezone_handler.admin_settings:
+  title: 'Timezone Form'
+  description: 'Enter your timezone details'
+  route_name: timezone_handler.admin_settings
+  parent: system.admin_config_system
