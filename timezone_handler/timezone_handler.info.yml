@@ -1,5 +1,0 @@
-name: 'timezone handler'
-type: module
-description: 'code related to timezones'
-core_version_requirement: ^8 || ^9
-package: 'Custom'
